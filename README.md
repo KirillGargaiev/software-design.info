@@ -1,4 +1,4 @@
-Javascript_Game
+# Javascript_Game
 Навчальний проєкт для демонстрації створення ігор з використанням мови Javascript.
 
 Гаргаєв Кирило | студент НТУУ "КПІ", ФІОТ | kgargaev@gmail.com
