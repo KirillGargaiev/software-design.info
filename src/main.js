@@ -36,7 +36,7 @@ class Road
 	}
 }
 
-class Car
+class Hero
 {	/**
  * 
  * @param {*} image 
@@ -75,16 +75,16 @@ class Car
 	}
 	/**
 	 * 
-	 * @param {*} car 
+	 * @param {*} hero 
 	 * @returns 
 	 */
-	Collide(car)
+	Collide(hero)
 	{
 		var hit = false;
 
-		if(this.y < car.y + car.image.height * scale && this.y + this.image.height * scale > car.y) //If there is collision by y
+		if(this.y < hero.y + hero.image.height * scale && this.y + this.image.height * scale > hero.y) //If there is collision by y
 		{
-			if(this.x + this.image.width * scale > car.x && this.x < car.x + car.image.width * scale) //If there is collision by x
+			if(this.x + this.image.width * scale > hero.x && this.x < hero.x + hero.image.width * scale) //If there is collision by x
 			{
 				hit = true;
 			}
@@ -105,7 +105,7 @@ class Car
 
 			this.x += d; //Changing position
 
-			//Rolling back the changes if the car left the screen
+			//Rolling back the changes if the hero left the screen
 			if(this.x + this.image.width * scale > canvas.width)
 			{
 				this.x -= d; 
@@ -142,7 +142,7 @@ var timer = null;
 var canvas = document.getElementById("canvas"); //Getting the canvas from DOM
 var ctx = canvas.getContext("2d"); //Getting the context to work with the canvas
 
-var scale = 0.1; //Cars scale
+var scale = 0.07; //hero's scale
 
 Resize(); //Changing the canvas size on startup
 
@@ -161,10 +161,10 @@ var roads =
 	new Road("images/road.jpg", canvas.width)
 ]; //Backgrounds
 
-var player = new Car("images/lion.png", canvas.width / 2, canvas.height / 2, true); //Player's object
+var player = new Hero("images/hero.png", canvas.width / 2, canvas.height / 2, true); //Player's object
 
 
-var speed = 5;
+var speed = 3;
 
 Start();
 
@@ -197,14 +197,14 @@ function Update()
 
 	if(RandomInteger(0, 10000) > 9700) //Generating new car
 	{
-		objects.push(new Car("images/car_red.png", RandomInteger(30, canvas.width - 50), RandomInteger(250, 400) * -1, false));
+		objects.push(new Hero("images/enemy.png", RandomInteger(30, canvas.width - 50), RandomInteger(250, 400) * -1, false));
 	}
 
 	player.Update();
 
 	if(player.dead)
 	{
-		alert("Crash!");
+		alert("You are dead!");
 		Stop();
 	}
 
@@ -233,7 +233,7 @@ function Update()
 
 		if(hit)
 		{
-			alert("Crash!");
+			alert("You are dead!");
 			Stop();
 			player.dead = true;
 			break;
@@ -265,30 +265,30 @@ function Draw() //Working with graphics
 		);
 	}
 
-	DrawCar(player);
+	DrawHero(player);
 
 	for(var i = 0; i < objects.length; i++)
 	{
-		DrawCar(objects[i]);
+		DrawHero(objects[i]);
 	}
 }
 /**
  * 
- * @param {*} car 
+ * @param {*} hero 
  */
-function DrawCar(car)
+function DrawHero(hero)
 {
 	ctx.drawImage
 	(
-		car.image, 
+		hero.image, 
 		0, 
 		0, 
-		car.image.width, 
-		car.image.height, 
-		car.x, 
-		car.y, 
-		car.image.width * scale, 
-		car.image.height * scale 
+		hero.image.width, 
+		hero.image.height, 
+		hero.x, 
+		hero.y, 
+		hero.image.width * scale, 
+		hero.image.height * scale 
 	);
 }
 /**
