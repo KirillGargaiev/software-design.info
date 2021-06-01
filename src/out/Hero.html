@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: Road</title>
+    <title>JSDoc: Class: Hero</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: Road</h1>
+    <h1 class="page-title">Class: Hero</h1>
 
     
 
@@ -28,7 +28,7 @@
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>Road<span class="signature">(image, y)</span><span class="type-signature"></span></h2>
+        <h2><span class="attribs"><span class="type-signature"></span></span>Hero<span class="signature">(image, x, y, isPlayer)</span><span class="type-signature"></span></h2>
         
     
 </header>
@@ -41,7 +41,7 @@
     
 
     
-    <h4 class="name" id="Road"><span class="type-signature"></span>new Road<span class="signature">(image, y)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="Hero"><span class="type-signature"></span>new Hero<span class="signature">(image, x, y, isPlayer)</span><span class="type-signature"></span></h4>
     
 
     
@@ -104,7 +104,53 @@
 
         <tr>
             
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
                 <td class="name"><code>y</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>isPlayer</code></td>
             
 
             <td class="type">
@@ -161,7 +207,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="main.js.html">main.js</a>, <a href="main.js.html#line10">line 10</a>
+        <a href="main.js.html">main.js</a>, <a href="main.js.html#line47">line 47</a>
     </li></ul></dd>
     
 
@@ -217,7 +263,7 @@
     
 
     
-    <h4 class="name" id="Update"><span class="type-signature"></span>Update<span class="signature">(road)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="Collide"><span class="type-signature"></span>Collide<span class="signature">(hero)</span><span class="type-signature"></span></h4>
     
 
     
@@ -257,7 +303,7 @@
 
         <tr>
             
-                <td class="name"><code>road</code></td>
+                <td class="name"><code>hero</code></td>
             
 
             <td class="type">
@@ -314,7 +360,169 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="main.js.html">main.js</a>, <a href="main.js.html#line28">line 28</a>
+        <a href="main.js.html">main.js</a>, <a href="main.js.html#line81">line 81</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="Move"><span class="type-signature"></span>Move<span class="signature">(v, d)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>v</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>d</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="main.js.html">main.js</a>, <a href="main.js.html#line100">line 100</a>
     </li></ul></dd>
     
 
