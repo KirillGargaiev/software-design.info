@@ -18,7 +18,7 @@
         <div class="wrapper">
             <canvas width="0" height="0" class="canvas" id="canvas">Ваш браузер не поддерживает JavaScript и HTML5!</canvas>
         </div>
-        <script src="game.js"></script>
+        <script src="main.js"></script>
     </body>
 </html>
   ```
