@@ -59,7 +59,7 @@
 var canvas = document.getElementById("canvas"); //Отримання полотна з DOM
 var ctx = canvas.getContext("2d"); //Отримання контексту - через нього можна працювати з полотном
  
-var scale = 0.07; //Масштаб машин
+var scale = 0.07; //Масштаб героїв
  
 Resize(); // При завантаженні сторінки задається розмір полотна
  
